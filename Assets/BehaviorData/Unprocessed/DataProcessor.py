@@ -2,13 +2,13 @@ import matplotlib as mpl
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot(file_name):
+def plot(file_name, x_label, y_label):
     x, y = np.loadtxt(file_name, delimiter=',', unpack=True)
     plt.plot(x, y)
-    plt.xlabel('Time (s)')
-    plt.ylabel('Y Position')
-    plt.title('Time vs Y Position for Headset Data')
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.title(x_label + " vs " + y_label)
     plt.legend()
     plt.show()
 
-plot('HeadsetData_GroupMeeting8-4.csv')
+plot('HeadsetData_GroupMeeting8-4.csv', "Time", "Y Position")
