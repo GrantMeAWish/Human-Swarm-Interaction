@@ -5,10 +5,10 @@ using System;
 
 public class OvrAvatarHand : MonoBehaviour
 {
-    GameObject ball; 
+    GameObject interBall; 
     void Start()
     {
-       ball = GameObject.FindGameObjectWithTag("ball");
+       interBall = GameObject.FindGameObjectWithTag("interactive");
 
     }
 
@@ -17,35 +17,35 @@ public class OvrAvatarHand : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) && OVRInput.Get(OVRInput.Button.PrimaryHandTrigger))
         {
             Debug.Log("PrimaryIndexTrigger");
-            /*  ball.transform.parent = this.transform;
-              ball.transform.position = Camera.main.transform.forward+ new Vector3(0,0.5f,1f);
-              ball.GetComponent<Rigidbody>().useGravity = false;
-              ball.GetComponent<Rigidbody>().isKinematic = true;*/
-            globalFlock.moveCircle(); 
+             interBall.transform.parent = this.transform;
+              interBall.transform.position = Camera.main.transform.forward+ new Vector3(0,0.5f,1f);
+              interBall.GetComponent<Rigidbody>().useGravity = false;
+              interBall.GetComponent<Rigidbody>().isKinematic = true;
+            //globalFlock.moveCircle(); 
 
 
 }
         if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) && OVRInput.Get(OVRInput.Button.SecondaryHandTrigger)){
             Debug.Log("SecondaryHand");
-            /*  ball.transform.parent = this.transform;
-              ball.transform.position = Camera.main.transform.forward + new Vector3(0, 0.5f, 1f);
-              ball.GetComponent<Rigidbody>().useGravity = false;
-              ball.GetComponent<Rigidbody>().isKinematic = true;*/
-            globalFlock.goFlock(); 
+             interBall.transform.parent = this.transform;
+              interBall.transform.position = Camera.main.transform.forward + new Vector3(0, 0.5f, 1f);
+              interBall.GetComponent<Rigidbody>().useGravity = false;
+              interBall.GetComponent<Rigidbody>().isKinematic = true;         
+            //globalFlock.goFlock(); 
         }
-        if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Three))
+        if ((OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.Three)) && (interBall.transform.parent != null))
             {
-            ball.transform.parent = null;
-          /*  ball.GetComponent<Rigidbody>().useGravity = true;
-            ball.GetComponent<Rigidbody>().isKinematic = false; */
+            interBall.transform.parent = null;
+            interBall.GetComponent<Rigidbody>().useGravity = true;
+            interBall.GetComponent<Rigidbody>().isKinematic = false; 
         }
-        if (OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.Button.Four))
+        if ((OVRInput.Get(OVRInput.Button.Two) || OVRInput.Get(OVRInput.Button.Four)) && (interBall.transform.parent != null))
         {
             Debug.Log("Button 2");
-           /* ball.transform.parent = null;
-            ball.GetComponent<Rigidbody>().useGravity = true;
-            ball.GetComponent<Rigidbody>().isKinematic = false;
-            ball.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 100f); */ 
+            interBall.transform.parent = null;
+            interBall.GetComponent<Rigidbody>().useGravity = true;
+            interBall.GetComponent<Rigidbody>().isKinematic = false;
+            interBall.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 5000f); 
         }
 
     }

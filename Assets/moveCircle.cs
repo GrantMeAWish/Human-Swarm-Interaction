@@ -5,11 +5,11 @@ using UnityEngine;
 public class moveCircle : MonoBehaviour
 {
 
-    public float speed = 2f;
-    public float delta = 3f;  // Amount to move left and right from the start point
+    public float speed = 10f;
+    public float delta = 20f;  // Amount to move left and right from the start point
     private Vector3 startPos;
     public float rotSpeed = 4.0f; 
-    private Vector3 targetPos = new Vector3(0,0,30f); 
+    private Vector3 targetPos = new Vector3(0,10,50f); 
     public Vector3 currentPos;
     float x, y;
     float targetZ = 20f;
@@ -22,7 +22,7 @@ public class moveCircle : MonoBehaviour
         timeCounter = Random.Range(10f, 30f); 
         speed = Random.Range(speed - 1, speed + 1);
         targetX = delta * Mathf.Cos(timeCounter);
-        targetY = delta * Mathf.Sin(timeCounter);
+        targetY = delta * Mathf.Sin(timeCounter) + 10;
         targetPos = new Vector3(targetX, targetY, targetZ);
 
 

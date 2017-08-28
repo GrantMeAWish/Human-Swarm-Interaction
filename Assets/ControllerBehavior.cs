@@ -55,7 +55,7 @@ public class ControllerBehavior : MonoBehaviour {
         if ((Mathf.Abs(leftContPos.x - rightContPos.x) <= 3) 
             && (Mathf.Abs(headsetPos.y - leftContPos.y) <= 2)
             && (Mathf.Abs(headsetPos.y - rightContPos.y) <= 2)) {
-            Debug.Log("USER IS COVERING");
+            //Debug.Log("USER IS COVERING");
         }
     }
 }

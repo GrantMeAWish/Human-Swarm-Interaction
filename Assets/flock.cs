@@ -5,15 +5,15 @@ using UnityEngine;
 public class flock : MonoBehaviour {
 
 	//bug speed and boundaries
-	public float speed = 0.0005f;
-    public float lowerBound = 8.5f;
-    public float upperBound = 9f; 
+	public float speed = 11f;
+    public float lowerBound = 10.5f;
+    public float upperBound = 11f; 
 
 	//how fast bug will turn
-	public float rotSpeed = 9f;
+	public float rotSpeed = 6f;
 
 	//max distance bugs can be to flock
-	float neighborDist = 2.0f;
+	public float neighborDist = 6.0f;
 
 	bool turning = false;
 
@@ -114,8 +114,8 @@ public class flock : MonoBehaviour {
 		if (groupSize > 0)
 		{
 			//calculate average center and speed of group
-			//centerVec = centerVec / groupSize + (goalPos - this.transform.position);
-          //  speed = groupSpeed / groupSize * speedMult;
+			centerVec = centerVec / groupSize + (goalPos - this.transform.position);
+            speed = groupSpeed / groupSize * speedMult;
 
 			//change bug direction after determining the new direction vector
 			Vector3 direction = (centerVec + avoidVec) - this.transform.position;

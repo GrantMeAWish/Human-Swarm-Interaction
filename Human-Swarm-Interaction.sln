@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Human-Swarm-Interaction.Plugins", "Human-Swarm-Interaction.Plugins.csproj", "{9839E9B2-DA08-9D3B-5FFF-981E341E02E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Human-Swarm-Interaction", "Human-Swarm-Interaction.csproj", "{92D57DF6-FE31-5BAC-5117-0F19F6D18698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Human-Swarm-Interaction.Editor", "Human-Swarm-Interaction.Editor.csproj", "{8262EBBE-91BE-1E31-B036-404869648BAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9839E9B2-DA08-9D3B-5FFF-981E341E02E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9839E9B2-DA08-9D3B-5FFF-981E341E02E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9839E9B2-DA08-9D3B-5FFF-981E341E02E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9839E9B2-DA08-9D3B-5FFF-981E341E02E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D57DF6-FE31-5BAC-5117-0F19F6D18698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D57DF6-FE31-5BAC-5117-0F19F6D18698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D57DF6-FE31-5BAC-5117-0F19F6D18698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D57DF6-FE31-5BAC-5117-0F19F6D18698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8262EBBE-91BE-1E31-B036-404869648BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8262EBBE-91BE-1E31-B036-404869648BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8262EBBE-91BE-1E31-B036-404869648BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8262EBBE-91BE-1E31-B036-404869648BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
